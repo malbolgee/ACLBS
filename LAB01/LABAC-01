@@ -1,0 +1,7 @@
+Questão 01:
+R - A diferença entre as instruções ADDI e ADDU é que
+"ADDU rd, rs, rt" soma o conteúdo dos registradores de 32-bits rs e rt e coloca
+o resultado em rd. Não acontece overflow.
+
+Já "ADDI rt, rs, imediato", soma o conteúdo do registradore de 32-bits rs com o
+valor de um imediato, colocando o resultado em rt. Não acontecem overflows. 
