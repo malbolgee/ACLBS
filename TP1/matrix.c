@@ -56,10 +56,41 @@ static void matrix_mult_2()
 	}
 }
 
+static void matrix_mult_3()
+{
+	int rows_a = 4;
+	int cols_a = 3;
+
+	int rows_b = 3;
+	int cols_b = 2;
+
+	int rows_c = rows_a;
+	int cols_c = cols_b;
+
+	int a[] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 6, 5, 4};
+	int b[] = {3, 2, 6, 5, 8, 7};
+	int c[8] = {0};
+
+	for (int i = 0; i < rows_a; ++i)
+		for (int k = 0; k < rows_b; ++k)
+			for (int j = 0; j < cols_b; ++j)
+				c[i * cols_c + j] += a[i * cols_a + k] * b[k * cols_b + j];
+
+	for (int i = 0; i < rows_c; ++i)
+	{
+		for (int j = 0; j < cols_c; ++j)
+			printf("%d ", c[j + i * cols_c]);
+
+		putchar_unlocked('\n');
+	}
+}
+
 int main(int argc, char **argv)
 {
 	matrix_mult();
 	putchar_unlocked('\n');
 	matrix_mult_2();
+	putchar_unlocked('\n');
+	matrix_mult_3();
 	return 0;
 }
