@@ -7,7 +7,7 @@
 
 matrix_a:		.word32			1, 2, 3, 4, 5, 6, 7, 8, 9, 6, 5, 4
 matrix_b:		.word32			3, 2, 6, 5, 8, 7
-matrix_c:		.word32			0, 0, 0, 0, 0, 0, 0, 0
+matrix_c:		.word32
 
 .code
 
